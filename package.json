@@ -1,0 +1,36 @@
+{
+  "name": "apprun-hot-reload",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest --watch",
+    "start": "webpack-dev-server",
+    "build": "webpack -p"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/jest": "^22.0.1",
+    "jest": "^22.0.4",
+    "ts-jest": "^22.0.1",
+    "ts-loader": "^3.3.0",
+    "typescript": "^2.6.2",
+    "webpack": "^3.10.0",
+    "webpack-dev-server": "^2.11.1"
+  },
+  "dependencies": {
+    "apprun": "^1.8.3"
+  },
+  "jest": {
+    "transform": {
+      "^.+\\.tsx?$": "ts-jest"
+    },
+    "testRegex": "(/__tests__/.*|(\\.|/)(test|spec))\\.(jsx?|tsx?)$",
+    "moduleFileExtensions": [
+      "ts", "tsx", "js", "jsx", "json", "node"
+    ],
+    "mapCoverage": true
+  }
+}
