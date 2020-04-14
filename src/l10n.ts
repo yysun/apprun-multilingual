@@ -1,11 +1,10 @@
 const DEFAULT_LANGUAGE = 'en';
-const dict = require('./dict.json');
-
+declare var dict;
 export let lang = document.cookie.replace(/(?:(?:^|.*;\s*)language\s*\=\s*([^;]*).*$)|^.*$/i, '$1') || 'en';
 
 export const setLanguage = (value, name = 'language') => {
   lang = value;
-  document.cookie = `${name}=${value || ""};path=/`;
+  document.cookie = `${name}=${value || ""};path=./`;
 }
 
 export default (text, ...args) => {

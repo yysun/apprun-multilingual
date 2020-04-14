@@ -1,4 +1,4 @@
-{
+window['dict'] = {
   "fr":{
     "Home": "Accueil",
     "About": "Sur",
