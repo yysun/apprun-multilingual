@@ -1,27 +1,28 @@
 {
-  "name": "apprun-hot-reload",
+  "name": "apprun-multilingual",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
     "test": "jest --watch",
-    "start": "webpack-dev-server",
-    "build": "webpack -p"
+    "start": "webpack-dev-server --mode development",
+    "build": "webpack -p --mode production"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "@types/jest": "^22.0.1",
-    "jest": "^22.0.4",
-    "ts-jest": "^22.0.1",
-    "ts-loader": "^3.3.0",
-    "typescript": "^2.6.2",
-    "webpack": "^3.10.0",
-    "webpack-dev-server": "^2.11.1"
+    "@types/jest": "^25.2.1",
+    "jest": "^25.3.0",
+    "ts-jest": "^25.3.1",
+    "ts-loader": "^6.2.2",
+    "typescript": "^3.8.3",
+    "webpack": "^4.42.1",
+    "webpack-cli": "^3.3.11",
+    "webpack-dev-server": "^3.10.3"
   },
   "dependencies": {
-    "apprun": "^1.8.3"
+    "apprun": "^2.23.13"
   },
   "jest": {
     "transform": {
@@ -29,7 +30,12 @@
     },
     "testRegex": "(/__tests__/.*|(\\.|/)(test|spec))\\.(jsx?|tsx?)$",
     "moduleFileExtensions": [
-      "ts", "tsx", "js", "jsx", "json", "node"
+      "ts",
+      "tsx",
+      "js",
+      "jsx",
+      "json",
+      "node"
     ],
     "mapCoverage": true
   }
