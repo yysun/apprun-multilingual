@@ -1,7 +1,10 @@
 import app from 'apprun';
 import _, { setLanguage } from './l10n';
 
-app.on('#', _ => app.run('#Home'))
+
+if (window.location.search.indexOf('fr') > 0) setLanguage('fr');
+else if (window.location.search.indexOf('zh') > 0) setLanguage('zh');
+else setLanguage('en');
 
 app.on('//', route => {
   const menus = document.querySelectorAll('.navbar-nav li');
